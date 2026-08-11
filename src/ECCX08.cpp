@@ -24,9 +24,6 @@
 const uint32_t ECCX08Class::_wakeupFrequency = 100000u;  // 100 kHz
 #ifdef __AVR__
 const uint32_t ECCX08Class::_normalFrequency = 400000u;  // 400 kHz
-#elif defined(ARDUINO_ARCH_ZEPHYR) && defined(ARDUINO_PORTENTA_H7_M7)
-// FIXME speed above 400kHz require manual configuration in stm32 running on zephyr
-const uint32_t ECCX08Class::_normalFrequency = 400000u;
 #else
 const uint32_t ECCX08Class::_normalFrequency = 1000000u; // 1 MHz
 #endif
